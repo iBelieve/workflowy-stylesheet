@@ -1,0 +1,35 @@
+.ui-dialog {
+  box-shadow: 0 0 0 1px rgba(16, 22, 26, 0.1), 0 4px 8px rgba(16, 22, 26, 0.2), 0 18px 46px 6px rgba(16, 22, 26, 0.2);
+  border-radius: 6px;
+  background: #ebf1f5;
+  border: none;
+}
+
+.ui-dialog-buttonpane {
+  background: transparent;
+  border: none;
+  margin: 0;
+  padding: 20px !important;
+}
+
+.ui-dialog-titlebar {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  border-radius: 6px 6px 0 0 !important;
+  box-shadow: 0 1px 0 rgba(16, 22, 26, 0.15);
+  background: #ffffff;
+  min-height: 40px;
+  padding-left: 20px;
+
+  border: none !important;
+  padding: 0 0 0 20px !important;
+
+  .ui-dialog-title {
+    color: #182026;
+    font-weight: 600;
+    font-size: 17px;
+    margin: 0;
+    font-family: $font-system;
+  }
+}
