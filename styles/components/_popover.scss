@@ -1,0 +1,68 @@
+@mixin popover {
+  background: white;
+  border: none;
+  filter: drop-shadow(0 0 0 rgba(16, 22, 26, 0.1)) drop-shadow(0 2px 4px rgba(16, 22, 26, 0.2)) drop-shadow(0 8px 24px rgba(16, 22, 26, 0.2));
+  border-radius: 3px;
+  padding: 5px;
+  min-width: 180px;
+
+  a, .button {
+    display: flex !important;
+    color: #182026 !important;
+    border-radius: 2px !important;
+    padding: 7px !important;
+    line-height: 16px !important;
+    min-height: 0;
+    margin: 0 !important;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 14px;
+    font-family: $font-system;
+
+    &:active {
+      background-color: rgba(115, 134, 148, 0.3);
+    }
+
+    &:hover {
+	    background-color: rgba(167, 182, 194, 0.3);
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    &::before {
+      color: #5c7080;
+      font: normal normal normal 16px/1 "Material Design Icons";
+      margin-right: 8px;
+    }
+
+    > hr {
+      display: none;
+    }
+  }
+}
+
+@mixin popover-item-danger {
+  color: #c23030 !important;
+
+  &:hover {
+    color: white !important;
+    background-color: #db3737;
+
+    &::before {
+      color: white;
+    }
+  }
+
+  &:active {
+    color: white !important;
+	  background-color: #c23030;
+
+    &::before {
+      color: white;
+    }
+  }
+
+  &::before {
+    color: #c23030;
+  }
+}

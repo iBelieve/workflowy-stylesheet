@@ -1,0 +1,57 @@
+.page {
+  @include card-elevation-1;
+
+  padding: 30px 60px 10px;
+}
+
+.pageStar {
+  background: none !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  @include mdi(#5c7080, 20px);
+  @include mdi-star-outline;
+
+  &.starred {
+    @include mdi-star;
+  }
+}
+
+#controlsLeft {
+  @include popover;
+
+  > .mouse-helper:before {
+    border-bottom-color: white !important;
+  }
+
+  .complete {
+    @include mdi-check;
+  }
+
+  .note {
+    @include mdi-file-document-box;
+
+    .addNote, .editNote {
+	    margin-right: 3px;
+    }
+  }
+
+  .share {
+    @include mdi-share;
+  }
+
+  .export {
+    @include mdi-download;
+  }
+
+  .duplicate {
+    @include mdi-content-copy;
+  }
+
+  .delete {
+    @include popover-item-danger;
+    @include mdi-delete;
+    @include separator-above;
+  }
+}

@@ -1,0 +1,23 @@
+[title~="@todo"] {
+    background-color: #137CBD !important;
+    color: white !important;
+    padding: 2px 3px !important;
+}
+
+[title~="@call"] {
+    background-color: #0F9960 !important;
+    color: white !important;
+    padding: 2px 3px !important;
+}
+
+[title~="@event"] {
+    background-color: #D9822B !important;
+    color: white !important;
+    padding: 2px 3px !important;
+}
+
+[title~="#urgent"] {
+    background-color: #DB3737 !important;
+    color: white !important;
+    padding: 2px 3px !important;
+}

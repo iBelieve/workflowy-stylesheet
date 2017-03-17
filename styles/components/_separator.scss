@@ -1,0 +1,30 @@
+@mixin separator-right {
+  position: relative;
+  margin-right: 21px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 100%;
+    top: 5px;
+    height: 20px;
+    margin: 0 10px;
+    border-left: 1px solid rgba(255, 255, 255, 0.15);
+    pointer-events: none;
+  }
+}
+
+@mixin separator-above {
+  position: relative;
+  margin-top: 11px !important;
+  overflow: inherit !important;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 0; bottom: 100%;
+    margin: 5px;
+    border-top: 1px solid rgba(16, 22, 26, 0.15);
+    pointer-events: none;
+  }
+}

@@ -1,0 +1,8 @@
+@mixin navbar-dark {
+    background: #394b59 !important;
+    box-shadow: inset 0 0 0 1px rgba(16, 22, 26, 0.2), 0 1px 1px rgba(16, 22, 26, 0.4);
+    color: #f5f8fa;
+    height: 50px;
+    display: flex;
+	align-items: center;
+}

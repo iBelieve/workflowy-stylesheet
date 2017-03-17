@@ -1,0 +1,40 @@
+@mixin button {
+  color: #f5f8fa;
+  display: inline-flex !important;
+  border: none !important;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 0 10px !important;
+  vertical-align: middle;
+  font-size: 14px;
+  min-width: 30px;
+  min-height: 30px;
+  line-height: 30px;
+
+  justify-content: center;
+  align-items: center;
+
+  font-family: $font-system;
+  background: none !important;
+  margin-top: 0 !important;
+  text-align: center;
+  opacity: 1 !important;
+
+  &:hover {
+    background: rgba(138, 155, 168, 0.15) !important;
+  }
+
+  &:active {
+    background: rgba(138, 155, 168, 0.3) !important;
+    color: #f5f8fa !important;
+  }
+}
+
+@mixin icon-button {
+  padding: 0 !important;
+
+  &::before {
+    color: #bfccd6;
+    font: normal normal normal 20px/1 "Material Design Icons";
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "workflowy-stylesheet",
+  "version": "0.1.0",
+  "description": "Custom stylesheet for Workflowy",
+  "repository": "iBeliever/workflowy-stylesheet",
+  "author": "Michael Spencer <sonrisesoftware@gmail.com>",
+  "license": "MPL-2.0",
+  "private": true,
+  "scripts": {
+    "build": "gulp styles",
+    "watch": "gulp watch"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^3.1.0"
+  }
+}

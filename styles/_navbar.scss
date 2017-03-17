@@ -1,0 +1,159 @@
+#header {
+  @include navbar-dark;
+
+  &::before {
+    content: '';
+    flex-grow: 1;
+    height: 100%;
+  }
+}
+
+#logo {
+  margin-top: 0;
+  width: 95px;
+  background: none;
+
+  &::before {
+    color: #f5f8fa;
+    content: 'Workflowy';
+    font-size: 16px;
+    font-family: $font-system;
+  }
+}
+
+#searchForm {
+  top: inherit;
+}
+
+#searchBox {
+  @include input-dark;
+  @include input-search;
+}
+
+.button {
+  @include button;
+}
+
+.redo-button, .undo-button {
+  @include button;
+  @include icon-button;
+
+  &:not(.enabled) {
+    opacity: 0.5 !important;
+    background: transparent !important;
+    cursor: default;
+  }
+
+  .icon {
+    display: none;
+  }
+}
+
+.redo-button {
+  @include mdi-redo;
+  margin-right: 0;
+}
+
+.undo-button {
+  @include mdi-undo;
+}
+
+.saveButton {
+  @include icon-button;
+  @include separator-right;
+
+  width: auto;
+
+  .topBarButtonTextContainer {
+    display: none;
+  }
+
+  &.saved {
+    @include mdi-check-all;
+
+    opacity: 0.5 !important;
+    background: transparent !important;
+    cursor: default;
+  }
+
+  &.saving {
+    @include mdi-autorenew;
+
+    background: transparent !important;
+    cursor: default;
+  }
+
+  &.saveNow {
+    @include mdi-check;
+  }
+}
+
+#savedViewHUDButton {
+  @include icon-button;
+  @include mdi-star-outline;
+
+  margin-left: 8px;
+}
+
+.showCompletedButton {
+  @include separator-right;
+
+  width: 130px;
+}
+
+#helpButton {
+  @include icon-button;
+  @include mdi-help-circle;
+
+  .topBarButtonTextContainer {
+    display: none;
+  }
+}
+
+#buttonBar {
+  border: none;
+  background: transparent !important;
+}
+
+.menu-button {
+  @include icon-button;
+  @include mdi-menu-down;
+
+  .menu-icon {
+    display: none;
+  }
+}
+
+.menu-options {
+  @include popover;
+}
+
+#settingsButton {
+  @include mdi-settings;
+}
+
+#printButton {
+  @include mdi-printer;
+}
+
+#exportAllButton {
+  @include mdi-download;
+}
+
+.button.logout {
+  @include mdi-logout;
+}
+
+#userEmail {
+  @include separator-above;
+}
+
+
+// Toolbar order
+#header::before { order: 1 }
+.undo-button { order: 2 }
+.redo-button { order: 3 }
+.saveButton { order: 4; }
+.showCompletedButton { order: 5 }
+#helpButton { order: 6 }
+#buttonBar { order: 7 }
