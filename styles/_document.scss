@@ -55,3 +55,21 @@
     @include separator-above;
   }
 }
+
+.selected > .name > #controls > #controlsLeft {
+	left: -110px;
+  top: -10px;
+}
+
+.selected > .name > #controls > #controlsLeft > .mouse-helper::before {
+	content: '';
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    margin-left: -15px;
+    height: 0;
+    width: 0;
+    border-left: 15px solid white;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent !important;
+}
