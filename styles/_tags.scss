@@ -22,7 +22,7 @@
   padding: 2px 3px !important;
 }
 
-[title~="#urgent"] {
+[title~="#urgent"], [title~="@deadline"] {
   background-color: #DB3737 !important;
   color: white !important;
   padding: 2px 3px !important;
