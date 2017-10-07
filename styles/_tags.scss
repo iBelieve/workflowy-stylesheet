@@ -1,36 +1,36 @@
+@mixin tag($tags, $color) {
+  $selector: ();
+
+  @each $tag in $tags {
+    $selector: append($selector, unquote("[title~='#{$tag}']"), 'comma');
+  }
+
+  #{$selector} {
+    background-color: rgba($color, 0.1) !important;
+    border-color: rgba($color, 0.2) !important;
+    color: rgba($color, 0.4) !important;
+
+    .contentTagText {
+      color: rgba($color, 0.9) !important;
+    }
+  }
+}
+
 .contentTag {
-  background-color: #5c7080 !important;
-  color: rgba(255, 255, 255, 0.6) !important;
-  padding: 1px 3px !important;
+  color: rgba(0, 0, 0, 0.4) !important;
+  background-color: #f1f1f1 !important;
+  border: 1px solid #ddd !important;
+  border-radius: 3px !important;
+  padding: 0px 2px !important;
 }
 
 .contentTagText {
   text-decoration: none !important;
-  color: white !important;
+  color: rgba(0, 0, 0, 0.6) !important;
   padding-left: 2px;
 }
 
-[title~='@todo'],
-[title~='@todos'],
-[title~='@task'],
-[title~='@tasks'],
-[title~='@goal'],
-[title~='@goals'] {
-  background-color: #137cbd !important;
-}
-
-[title~='@note'],
-[title~='@idea'] {
-  background-color: #0f9960 !important;
-}
-
-[title~='@call'],
-[title~='@event'],
-[title~='@meeting'] {
-  background-color: #d9822b !important;
-}
-
-[title~='#urgent'],
-[title~='@deadline'] {
-  background-color: #db3737 !important;
-}
+@include tag('@todo' '@todos' '@task' '@tasks' '@goal' '@goals', #137cbd);
+@include tag('@note' '@idea', #0f9960);
+@include tag('@call' '@event' '@meeting', #d9822b);
+@include tag('#urgent' '@deadline', #db3737);
