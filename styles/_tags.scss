@@ -1,29 +1,36 @@
 .contentTag {
-  background-color: #5C7080 !important;
-  color: white !important;
-  padding: 2px 3px !important;
+  background-color: #5c7080 !important;
+  color: rgba(255, 255, 255, 0.6) !important;
+  padding: 1px 3px !important;
 }
 
-[title~="@todo"], [title~="@todos"], [title~="@task"], [title~="@tasks"], [title~="@goal"], [title~="@goals"] {
-  background-color: #137CBD !important;
+.contentTagText {
+  text-decoration: none !important;
   color: white !important;
-  padding: 2px 3px !important;
+  padding-left: 2px;
 }
 
-[title~="@note"], [title~="@idea"] {
-  background-color: #0F9960 !important;
-  color: white !important;
-  padding: 2px 3px !important;
+[title~='@todo'],
+[title~='@todos'],
+[title~='@task'],
+[title~='@tasks'],
+[title~='@goal'],
+[title~='@goals'] {
+  background-color: #137cbd !important;
 }
 
-[title~="@call"], [title~="@event"], [title~="@meeting"] {
-  background-color: #D9822B !important;
-  color: white !important;
-  padding: 2px 3px !important;
+[title~='@note'],
+[title~='@idea'] {
+  background-color: #0f9960 !important;
 }
 
-[title~="#urgent"], [title~="@deadline"] {
-  background-color: #DB3737 !important;
-  color: white !important;
-  padding: 2px 3px !important;
+[title~='@call'],
+[title~='@event'],
+[title~='@meeting'] {
+  background-color: #d9822b !important;
+}
+
+[title~='#urgent'],
+[title~='@deadline'] {
+  background-color: #db3737 !important;
 }
